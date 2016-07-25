@@ -28,7 +28,9 @@
 }
 
 .b-alay__app__textarea {
+  font-size: 14px;
   margin-right: 20px;
+  padding: 10px;
 }
 
 @keyframes spin {
