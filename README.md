@@ -1,5 +1,5 @@
 # Alay Translator
-Translate normal text to alay.
+Alay Translator is very simple React JS application to translate normal text to alay.
 Alay Translator does not require Javascript bundler. It embraces the use of [JS modules feature from browsers][js_modules].
 
 Demo: <https://tools.kaklabs.com/alay-translator.html>
