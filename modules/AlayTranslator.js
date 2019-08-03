@@ -1,8 +1,6 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './AlayTranslator.css';
+'use strict';
 
-class AlayTranslator extends Component {
+class AlayTranslator extends React.Component {
   constructor(props) {
     super(props);
     this.state = {originalText: '', translatedText: '', translator: "0"};
@@ -64,7 +62,7 @@ class AlayTranslator extends Component {
     return (
       <div className="b-alay">
         <header className="b-alay__header">
-          <img src={logo} className="b-alay__header__logo" alt="logo" />
+          <img src="logo.svg" className="b-alay__header__logo" alt="logo" />
           <h1>Alay Translator</h1>
         </header>
         <form className='b-alay__app'>
@@ -80,7 +78,7 @@ class AlayTranslator extends Component {
             </ul>
           </fieldset>
 
-          <textarea rows="10" cols="50" placeholder="Teks..." className='b-alay__app__textarea' onChange={this.handleTextChange.bind(this)}>
+          <textarea rows="10" cols="50" placeholder="Text..." className='b-alay__app__textarea' onChange={this.handleTextChange.bind(this)}>
           </textarea>
 
           <textarea rows="10" cols="50" className='b-alay__app__textarea' value={this.state.translatedText} readOnly >
