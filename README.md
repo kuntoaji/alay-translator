@@ -1,20 +1,21 @@
 # Alay Translator
-Translate normal text to alay
+Translate normal text to alay.
+Alay Translator does not require Javascript bundler. It embraces the use of [JS modules feature from browsers][js_modules].
 
-## Installation
-1. Clone repository
-2. Change directory to the cloned repository
-2. Run `npm install`
+Demo: <https://tools.kaklabs.com/alay-translator.html>
 
-### `npm start`
+## How To Run Alay Translator
+* Clone repository - `git clone git@github.com:kuntoaji/alay-translator.git`
+* Change directory - `cd alay-translator`
+* Run web server. If your machine has python, you can run `python -m SimpleHTTPServer`.
+* Open localhost from your browser. Example: `localhost:8000`.
 
-Runs the app in the development mode.
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How To Build JS Modules
+* Run `npm install`
+* Run `npx babel modules --out-dir build --presets react-app/prod`
+* If you want to run in watch mode `npx babel --watch modules --out-dir build --presets react-app/prod`
 
-### `npm run build`
+## License
+Released under the MIT License, Copyright (c) 2015–ω Kunto Aji Kristianto.
 
-Builds the app for production to the `build` folder.
-It correctly bundles React in production mode and optimizes the build for the best performance.
-The build is minified and the filenames include the hashes.
-
-**Demo:** <https://www.kaklabs.com/tools/alay-translator>
+[js_modules]: https://v8.dev/features/modules
