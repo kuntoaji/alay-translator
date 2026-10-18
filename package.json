@@ -1,10 +1,12 @@
 {
   "name": "alay-translator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Translate normal text to alay",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "babel modules --out-dir build",
+    "watch": "babel --watch modules --out-dir build",
+    "test": "node --test"
   },
   "repository": {
     "type": "git",
@@ -20,8 +22,9 @@
     "url": "https://github.com/kuntoaji/alay-translator/issues"
   },
   "homepage": "https://github.com/kuntoaji/alay-translator#readme",
-  "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2"
+  "devDependencies": {
+    "@babel/cli": "^8.0.6",
+    "@babel/core": "^8.0.7",
+    "@babel/preset-react": "^8.0.1"
   }
 }

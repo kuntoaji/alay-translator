@@ -1,14 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Alay Translator</title>
-    <meta name="description" content="Alay Translator">
+    <title>Alay Translator - Indonesian Slang to Normal Text</title>
+    <meta name="description" content="Translate Indonesian alay slang to normal text, or turn normal text into alay. Pick a direction, type in the first box, and read the result in the second.">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <script src="https://unpkg.com/react@16/umd/react.production.min.js" crossorigin></script>
-    <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js" crossorigin></script>
+    <link rel="icon" href="favicon.ico">
+    <script src="https://unpkg.com/react@18.3.1/umd/react.production.min.js" integrity="sha384-DGyLxAyjq0f9SPpVevD6IgztCFlnMF6oW/XQGmfe+IsZ8TqEiDrcHkMLKI6fiB/Z" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js" integrity="sha384-gTGxhz21lVGYNMcdJOyq01Edg0jhn/c22nsx0kyqP0TxaV5WVdsSH1fSDUf5YJj1" crossorigin="anonymous"></script>
     <style>
+      :root {
+        --kt-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+
       html {
         box-sizing: border-box;
       }
@@ -20,53 +24,44 @@
       body {
         margin: 0;
         padding: 0;
-        font-family: sans-serif;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        line-height: 1.5;
+        color: #111;
       }
 
-      .b-alay {
-        text-align: center;
+      .page {
+        max-width: 48rem;
+        margin: 0 auto;
+        padding: 2rem 1rem;
       }
 
-      .b-alay__header {
-        background-color: #222;
-        padding: 20px;
-        color: white;
+      .page__description {
+        color: #555;
       }
 
-      .b-alay__header__logo {
-        animation: spin infinite 20s linear;
-        height: 80px;
-      }
-
-      .b-alay__app__fieldset {
-        border: none;
-      }
-
-      .b-alay__app__fieldset__list {
-        list-style-type: none;
-        padding-left: 0;
-      }
-
-      .b-alay__app__fieldset__list__checkbox {
-        display: inline-block;
-        padding-right: 20px;
-      }
-
+      .b-alay__app__fieldset { border: 0; padding: 0; margin: 0 0 1rem; }
+      .b-alay__app__fieldset__list { list-style: none; padding: 0; margin: 0; display: flex; gap: 1.5rem; }
+      .b-alay__app__fieldset__list__checkbox input { margin-right: .5rem; }
       .b-alay__app__textarea {
-        font-size: 14px;
-        margin-right: 20px;
-        padding: 10px;
+        display: block;
+        width: 100%;
+        margin: 0 0 1rem;
+        padding: .75rem;
+        font-size: .875rem;
+        border: 1px solid rgba(0, 0, 0, .2);
+        border-radius: .25rem;
+        background: #fff;
+        font-family: var(--kt-mono);
       }
-
-      @keyframes spin {
-        from { transform: rotate(0deg); }
-        to { transform: rotate(360deg); }
-      }
+      .b-alay__app__textarea[readonly] { background: #f4f4f4; }
     </style>
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="build/AlayTranslator.js"></script>
+    <main class="page">
+      <h1>Alay Translator</h1>
+      <p class="page__description">Translate Indonesian alay slang to normal text, or turn normal text into alay. Pick a direction, type in the first box, and read the result in the second.</p>
+      <div id="root"></div>
+    </main>
     <script type="module" src="build/index.js"></script>
   </body>
 </html>

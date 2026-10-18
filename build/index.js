@@ -1,3 +1,2 @@
 import AlayTranslator from './AlayTranslator.js';
-
-ReactDOM.render(React.createElement(AlayTranslator, null), document.getElementById('root'));
+ReactDOM.createRoot(document.getElementById('root')).render(/*#__PURE__*/React.createElement(AlayTranslator, null));
